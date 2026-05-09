@@ -1,13 +1,12 @@
 // ============================================
-// C4 GYM - PREMIUM WEBSITE JAVASCRIPT
+// C4 GYM - PRELOADER & NAVIGATION
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // ============================================
-    // PRELOADER
-    // ============================================
-    const preloader = document.getElementById('preloader');
+    // --- PRELOADER ---
+    var preloader = document.getElementById('preloader');
+
     window.addEventListener('load', function () {
         setTimeout(function () {
             preloader.classList.add('hidden');
@@ -15,21 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1500);
     });
 
-    // Fallback in case load event already fired
+    // Fallback
     setTimeout(function () {
         preloader.classList.add('hidden');
         document.body.style.overflow = 'auto';
-    }, 3000);
-      // ============================================
-    // NAVIGATION
-    // ============================================
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    }, 3500);
 
-    // Scroll effect on navbar
+    // --- NAVBAR SCROLL ---
+    var navbar = document.getElementById('navbar');
+
     window.addEventListener('scroll', function () {
         if (window.scrollY > 80) {
             navbar.classList.add('scrolled');
@@ -37,16 +30,23 @@ document.addEventListener('DOMContentLoaded', function () {
             navbar.classList.remove('scrolled');
         }
     });
+        // --- HAMBURGER & MOBILE MENU ---
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    var mobileLinks = document.querySelectorAll('.mobile-nav-links a');
 
-    // Hamburger toggle
     hamburger.addEventListener('click', function () {
         hamburger.classList.toggle('active');
         mobileMenu.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+
+        if (mobileMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     });
 
-    // Close mobile menu on link click
-    mobileNavLinks.forEach(function (link) {
+    mobileLinks.forEach(function (link) {
         link.addEventListener('click', function () {
             hamburger.classList.remove('active');
             mobileMenu.classList.remove('active');
@@ -54,216 +54,199 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
+    // --- ACTIVE NAV LINK ON SCROLL ---
+    var navAnchors = document.querySelectorAll('.nav-links a');
+    var allSections = document.querySelectorAll('section[id]');
 
-    function updateActiveNav() {
-        const scrollPos = window.scrollY + 150;
+    window.addEventListener('scroll', function () {
+        var scrollPos = window.scrollY + 150;
 
-        sections.forEach(function (section) {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
+        allSections.forEach(function (sec) {
+            var top = sec.offsetTop;
+            var height = sec.offsetHeight;
+            var id = sec.getAttribute('id');
 
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                navLinks.forEach(function (link) {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + sectionId) {
-                        link.classList.add('active');
+            if (scrollPos >= top && scrollPos < top + height) {
+                navAnchors.forEach(function (a) {
+                    a.classList.remove('active');
+                    if (a.getAttribute('href') === '#' + id) {
+                        a.classList.add('active');
                     }
                 });
             }
         });
-    }
+    });
+        // --- HERO PARTICLES ---
+    var particleBox = document.querySelector('.hero-content');
 
-    window.addEventListener('scroll', updateActiveNav);
-      // ============================================
-    // HERO PARTICLES
-    // ============================================
-    const particlesContainer = document.getElementById('particles');
-    if (particlesContainer) {
-        for (let i = 0; i < 30; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 6 + 's';
-            particle.style.animationDuration = (4 + Math.random() * 4) + 's';
-            particle.style.width = (2 + Math.random() * 4) + 'px';
-            particle.style.height = particle.style.width;
-            particlesContainer.appendChild(particle);
+    if (particleBox) {
+        var heroEl = document.querySelector('.hero');
+        for (var i = 0; i < 25; i++) {
+            var dot = document.createElement('div');
+            dot.style.cssText = 'position:absolute;width:' + (2 + Math.random() * 4) + 'px;height:' + (2 + Math.random() * 4) + 'px;background:#ff2d2d;border-radius:50%;opacity:0.25;z-index:1;left:' + (Math.random() * 100) + '%;top:' + (Math.random() * 100) + '%;animation:particleDrift ' + (4 + Math.random() * 5) + 's ease-in-out infinite;animation-delay:' + (Math.random() * 5) + 's;';
+            heroEl.appendChild(dot);
         }
+
+        var styleEl = document.createElement('style');
+        styleEl.textContent = '@keyframes particleDrift{0%,100%{transform:translateY(0) scale(1);opacity:0.2;}50%{transform:translateY(-90px) scale(1.4);opacity:0.6;}}';
+        document.head.appendChild(styleEl);
     }
 
-    // ============================================
-    // STAT COUNTER ANIMATION
-    // ============================================
-    const statNumbers = document.querySelectorAll('.stat-number');
-    let statsCounted = false;
+    // --- STAT COUNTER ---
+    var statNums = document.querySelectorAll('.hero-stat-num');
+    var counted = false;
 
-    function animateCounters() {
-        statNumbers.forEach(function (stat) {
-            const target = parseInt(stat.getAttribute('data-target'));
-            const duration = 2000;
-            const step = target / (duration / 16);
-            let current = 0;
+    function runCounters() {
+        statNums.forEach(function (el) {
+            var target = parseInt(el.getAttribute('data-target'));
+            var step = target / 120;
+            var current = 0;
 
-            function updateCounter() {
+            function tick() {
                 current += step;
                 if (current < target) {
-                    stat.textContent = Math.floor(current);
-                    requestAnimationFrame(updateCounter);
+                    el.textContent = Math.floor(current);
+                    requestAnimationFrame(tick);
                 } else {
-                    stat.textContent = target;
+                    el.textContent = target;
                 }
             }
 
-            updateCounter();
+            tick();
         });
     }
 
-    // Intersection Observer for stats
-    const heroSection = document.querySelector('.hero');
-    if (heroSection) {
-        const statsObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting && !statsCounted) {
-                    statsCounted = true;
-                    animateCounters();
-                }
-            });
-        }, { threshold: 0.5 });
-
-        statsObserver.observe(heroSection);
-      }
-      // ============================================
-    // SCROLL ANIMATIONS
-    // ============================================
-    const animateElements = document.querySelectorAll('.service-card, .plan-card, .contact-card, .gallery-item, .feature-item, .social-card');
-
-    animateElements.forEach(function (el) {
-        el.classList.add('animate-on-scroll');
-    });
-
-    const scrollObserver = new IntersectionObserver(function (entries) {
+    var heroObs = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                const delay = entry.target.getAttribute('data-delay') || 0;
-                setTimeout(function () {
-                    entry.target.classList.add('animated');
-                }, parseInt(delay));
-                scrollObserver.unobserve(entry.target);
+            if (entry.isIntersecting && !counted) {
+                counted = true;
+                runCounters();
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+    }, { threshold: 0.4 });
+
+    var heroSec = document.querySelector('.hero');
+    if (heroSec) { heroObs.observe(heroSec); }
+        // --- SCROLL ANIMATIONS ---
+    var animItems = document.querySelectorAll(
+        '.service-card, .service-card-full, .plan-card, .contact-item, .gallery-item, .about-feature, .social-card, .about-img-wrap, .about-text'
+    );
+
+    animItems.forEach(function (el) {
+        el.classList.add('anim-up');
     });
 
-    animateElements.forEach(function (el) {
-        scrollObserver.observe(el);
+    var scrollObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                var d = entry.target.getAttribute('data-delay') || 0;
+                setTimeout(function () {
+                    entry.target.classList.add('visible');
+                }, parseInt(d));
+                scrollObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    animItems.forEach(function (el) {
+        scrollObs.observe(el);
     });
 
-    // ============================================
-    // BACK TO TOP BUTTON
-    // ============================================
-    const backToTop = document.getElementById('backToTop');
+    // --- BACK TO TOP ---
+    var topBtn = document.getElementById('backToTop');
 
     window.addEventListener('scroll', function () {
         if (window.scrollY > 500) {
-            backToTop.classList.add('visible');
+            topBtn.classList.add('visible');
         } else {
-            backToTop.classList.remove('visible');
+            topBtn.classList.remove('visible');
         }
     });
-      // ============================================
-    // QUOTES SLIDER - Duplicate for infinite scroll
-    // ============================================
-    const quotesTrack = document.getElementById('quotesTrack');
-    if (quotesTrack) {
-        const quoteCards = quotesTrack.innerHTML;
-        quotesTrack.innerHTML = quoteCards + quoteCards;
+        // --- QUOTES CAROUSEL DUPLICATION ---
+    var qTrack = document.getElementById('quotesTrack');
+    if (qTrack) {
+        var originalCards = qTrack.innerHTML;
+        qTrack.innerHTML = originalCards + originalCards;
     }
 
-}); // END of DOMContentLoaded
+}); // END DOMContentLoaded
 
 // ============================================
 // MEMBERSHIP POPUP
 // ============================================
-function showMembershipPopup() {
-    const popup = document.getElementById('membershipPopup');
+
+function openMembershipPopup() {
+    var popup = document.getElementById('membershipPopup');
     popup.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Smooth scroll to contact section
+    // Scroll to contact section behind popup
     setTimeout(function () {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var contactEl = document.getElementById('contact');
+        if (contactEl) {
+            contactEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }, 300);
+    }, 350);
 }
 
 function closeMembershipPopup() {
-    const popup = document.getElementById('membershipPopup');
+    var popup = document.getElementById('membershipPopup');
     popup.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
 
 // Close popup on overlay click
 document.addEventListener('click', function (e) {
-    const popup = document.getElementById('membershipPopup');
+    var popup = document.getElementById('membershipPopup');
     if (e.target === popup) {
         closeMembershipPopup();
     }
 });
 
-// Close popup on ESC key
+// Close on ESC
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         closeMembershipPopup();
-        // Also close mobile menu
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        if (mobileMenu.classList.contains('active')) {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
+
+        var ham = document.getElementById('hamburger');
+        var mob = document.getElementById('mobileMenu');
+        if (mob && mob.classList.contains('active')) {
+            ham.classList.remove('active');
+            mob.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
-      
-    }// ============================================
-// SHARE WEBSITE FUNCTION
+    }
+});
 // ============================================
+// SHARE FUNCTION
+// ============================================
+
 function shareWebsite() {
     if (navigator.share) {
         navigator.share({
             title: 'C4 GYM - Rawalpindi',
-            text: 'Check out C4 GYM - The best gym in Rawalpindi! 5.0 ★ Rated. Located at 22 No. Chungi Rd, Cantt.',
+            text: 'Check out C4 GYM - The best gym in Rawalpindi! 5.0 Rated.',
             url: window.location.href
-        }).catch(function (err) {
-            console.log('Share cancelled');
-        });
+        }).catch(function () {});
     } else {
-        // Fallback: copy to clipboard
-        const textArea = document.createElement('textarea');
-        textArea.value = 'C4 GYM - The best gym in Rawalpindi! 🏋️ 5.0 ★ Rated\n📍 22 No. Chungi Rd, opp. Cheezious, Cantt\n📞 0317 5793957\n' + window.location.href;
-        document.body.appendChild(textArea);
-        textArea.select();
+        var ta = document.createElement('textarea');
+        ta.value = 'C4 GYM - Best gym in Rawalpindi!\n22 No. Chungi Rd, Cantt\nCall: 0317 5793957\n' + window.location.href;
+        document.body.appendChild(ta);
+        ta.select();
         document.execCommand('copy');
-        document.body.removeChild(textArea);
+        document.body.removeChild(ta);
 
-        // Show a small notification
-        var notification = document.createElement('div');
-        notification.textContent = '✓ Link copied to clipboard!';
-        notification.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ff2d2d,#ff6b35);color:white;padding:12px 24px;border-radius:50px;font-family:Oswald,sans-serif;letter-spacing:1px;z-index:99999;font-size:0.9rem;box-shadow:0 5px 20px rgba(255,45,45,0.4);';
-        document.body.appendChild(notification);
+        var note = document.createElement('div');
+        note.textContent = '✓ Link copied!';
+        note.style.cssText = 'position:fixed;bottom:75px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ff2d2d,#ff6b35);color:white;padding:11px 22px;border-radius:50px;font-family:Oswald,sans-serif;letter-spacing:1px;z-index:99999;font-size:0.88rem;box-shadow:0 5px 18px rgba(255,45,45,0.4);';
+        document.body.appendChild(note);
+
         setTimeout(function () {
-            notification.style.opacity = '0';
-            notification.style.transition = 'opacity 0.5s ease';
+            note.style.opacity = '0';
+            note.style.transition = 'opacity 0.4s';
             setTimeout(function () {
-                document.body.removeChild(notification);
-            }, 500);
+                document.body.removeChild(note);
+            }, 400);
         }, 2000);
     }
-            }
-});
+    }
