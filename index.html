@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -27,13 +27,12 @@
                 <span class="logo-c4">C4</span>
                 <span class="logo-gym">GYM</span>
             </div>
-            <ul class="nav-links" id="navLinks">
+            <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#plans">Plans</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#quotes">Motivation</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-right">
@@ -47,9 +46,9 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenu">
-        <div class="mobile-menu-content">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
             <div class="mobile-logo">
                 <span class="logo-c4">C4</span>
                 <span class="logo-gym">GYM</span>
@@ -60,129 +59,117 @@
                 <li><a href="#services"><i class="fas fa-dumbbell"></i> Services</a></li>
                 <li><a href="#plans"><i class="fas fa-tags"></i> Plans</a></li>
                 <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
-                <li><a href="#quotes"><i class="fas fa-quote-left"></i> Motivation</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
-            <div class="mobile-menu-social">
+            <div class="mobile-social">
                 <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
             </div>
             <a href="tel:03175793957" class="mobile-call-btn"><i class="fas fa-phone"></i> Call 0317 5793957</a>
         </div>
-                        </div>
-                            <!-- Hero Section -->
+    </div>
+        <!-- ========== LANDING PAGE / HERO ========== -->
     <section id="home" class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
-        <div class="hero-particles" id="particles"></div>
         <div class="hero-content">
             <div class="hero-badge">
-                <i class="fas fa-star"></i> 5.0 Rated Gym in Rawalpindi
+                <i class="fas fa-star"></i>
+                <span>5.0 Rated Gym in Rawalpindi</span>
                 <i class="fas fa-star"></i>
             </div>
             <h1 class="hero-title">
-                <span class="line1">FORGE YOUR</span>
-                <span class="line2">LEGEND</span>
-                <span class="line3">AT <span class="highlight">C4</span> GYM</span>
+                <span class="hero-line1">FORGE YOUR</span>
+                <span class="hero-line2">LEGEND</span>
+                <span class="hero-line3">AT <span class="text-gradient">C4</span> GYM</span>
             </h1>
-            <p class="hero-subtitle">"The pain you feel today will be the strength you feel tomorrow."</p>
+            <p class="hero-tagline">Where Champions Are Built & Limits Are Shattered</p>
             <div class="hero-buttons">
-                <a href="#plans" class="btn btn-primary pulse-btn">
+                <a href="#plans" class="btn-primary-hero">
                     <i class="fas fa-fire"></i> Join Now
                 </a>
-                <a href="#services" class="btn btn-secondary">
+                <a href="#services" class="btn-outline-hero">
                     <i class="fas fa-arrow-right"></i> Explore
                 </a>
             </div>
             <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="39">0</span>
-                    <span class="stat-plus">+</span>
-                    <span class="stat-label">5★ Reviews</span>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" data-target="39">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-text">5★ Reviews</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="500">0</span>
-                    <span class="stat-plus">+</span>
-                    <span class="stat-label">Members</span>
+                <div class="hero-stat-line"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" data-target="500">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-text">Members</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="7">0</span>
-                    <span class="stat-plus">+</span>
-                    <span class="stat-label">Services</span>
+                <div class="hero-stat-line"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num" data-target="7">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-text">Programs</span>
                 </div>
             </div>
         </div>
-        <div class="hero-scroll">
+        <div class="hero-scroll-down">
             <a href="#about">
-                <div class="scroll-indicator">
-                    <div class="scroll-dot"></div>
-                </div>
+                <div class="scroll-mouse"><div class="scroll-dot"></div></div>
                 <span>Scroll Down</span>
             </a>
         </div>
-    </section>
+                        </section>
+                <!-- ========== QUOTE DIVIDER 1 ========== -->
+    <div class="quote-divider">
+        <div class="quote-divider-bg" style="background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1920&h=400&fit=crop');"></div>
+        <div class="quote-divider-overlay"></div>
+        <div class="quote-divider-content">
+            <i class="fas fa-quote-left quote-divider-icon"></i>
+            <p class="quote-divider-text">"The pain you feel today will be the strength you feel tomorrow."</p>
+            <span class="quote-divider-author">— Grind Mentality</span>
+        </div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" class="section about-section">
+        <div class="section-bg-image" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&h=1080&fit=crop');"></div>
+        <div class="section-bg-overlay"></div>
+        <div class="container section-content">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-bolt"></i> WHO WE ARE</span>
-                <h2 class="section-title">MORE THAN A <span class="highlight">GYM</span></h2>
-                <div class="title-line"></div>
+                <h2 class="section-title">MORE THAN A <span class="text-gradient">GYM</span></h2>
+                <div class="section-line"></div>
             </div>
             <div class="about-grid">
-                <div class="about-image-container">
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=700&fit=crop" alt="C4 Gym Interior">
-                        <div class="image-overlay-badge">
-                            <span class="big-number">5.0</span>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="review-count">39 Reviews</span>
-                        </div>
+                <div class="about-img-wrap">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=500&fit=crop" alt="C4 Gym Interior">
                     </div>
-                    <div class="about-image-small">
-                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=300&h=300&fit=crop" alt="Training">
+                    <div class="about-rating-box">
+                        <span class="about-rating-num">5.0</span>
+                        <div class="about-rating-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="about-rating-reviews">39 Reviews</span>
                     </div>
                 </div>
-                <div class="about-content">
-                    <h3>"No one said it would be easy. They said it would be <span class="highlight">worth it.</span>"</h3>
-                    <p>Welcome to <strong>C4 GYM</strong> – Rawalpindi's premier fitness destination where champions are built and limits are shattered. Located at 22 No. Chungi Rd, opposite Cheezious, Cantt, we provide a world-class training environment that pushes you beyond what you thought possible.</p>
+                <div class="about-text">
+                    <h3>Rawalpindi's Premier Fitness Destination</h3>
+                    <p>Welcome to <strong>C4 GYM</strong> – where champions are built and limits are shattered. Located at 22 No. Chungi Rd, opposite Cheezious, Cantt, we provide a world-class training environment that pushes you beyond what you thought possible.</p>
                     <p>Whether you're a beginner taking your first step or a seasoned athlete chasing new records, C4 GYM has everything you need. Our state-of-the-art equipment, expert trainers, and intense atmosphere will fuel your transformation.</p>
                     <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <h4>Open Daily</h4>
-                                <p>Until 12:30 AM</p>
-                            </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-clock"></i></div>
+                            <div><h4>Open Daily</h4><p>Until 12:30 AM</p></div>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <h4>Prime Location</h4>
-                                <p>Cantt, Rawalpindi</p>
-                            </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><h4>Prime Location</h4><p>Cantt, Rawalpindi</p></div>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-users"></i></div>
-                            <div>
-                                <h4>Expert Trainers</h4>
-                                <p>Certified Professionals</p>
-                            </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-users"></i></div>
+                            <div><h4>Expert Trainers</h4><p>Certified Pros</p></div>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fas fa-trophy"></i></div>
-                            <div>
-                                <h4>Top Rated</h4>
-                                <p>5.0 Stars on Google</p>
-                            </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-trophy"></i></div>
+                            <div><h4>Top Rated</h4><p>5.0 on Google</p></div>
                         </div>
                     </div>
                 </div>
@@ -190,465 +177,359 @@
         </div>
     </section>
 
-    <!-- Motivational Banner 1 -->
-    <section class="quote-banner quote-banner-1">
-        <div class="quote-overlay"></div>
-        <div class="quote-content">
-            <i class="fas fa-quote-left quote-icon"></i>
-            <h2>"The body achieves what the mind believes. Your only limit is you."</h2>
-            <div class="quote-line"></div>
-            <p>— C4 GYM Philosophy</p>
+    <!-- ========== QUOTE DIVIDER 2 ========== -->
+    <div class="quote-divider">
+        <div class="quote-divider-bg" style="background-image: url('https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=1920&h=400&fit=crop');"></div>
+        <div class="quote-divider-overlay"></div>
+        <div class="quote-divider-content">
+            <i class="fas fa-skull-crossbones quote-divider-icon"></i>
+            <p class="quote-divider-text">"Nobody cares about your excuses. Nobody pities you for procrastinating. It's your life. Wake up and make it happen."</p>
+            <span class="quote-divider-author">— No Excuses</span>
         </div>
-    </section>
-        <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
+    </div>            
+        <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" class="section services-section">
+        <div class="container section-content">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-fire"></i> WHAT WE OFFER</span>
-                <h2 class="section-title">OUR <span class="highlight">SERVICES</span></h2>
-                <div class="title-line"></div>
-                <p class="section-desc">"Don't wish for it. Work for it."</p>
+                <h2 class="section-title">OUR <span class="text-gradient">SERVICES</span></h2>
+                <div class="section-line"></div>
             </div>
             <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=300&fit=crop" alt="Personal Training">
-                        <div class="service-overlay">
-                            <i class="fas fa-user-friends"></i>
-                        </div>
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&h=350&fit=crop" alt="Personal Training">
+                        <div class="service-card-icon"><i class="fas fa-user-friends"></i></div>
                     </div>
-                    <div class="service-info">
+                    <div class="service-card-body">
                         <h3>Personal Training</h3>
                         <p>One-on-one customized training sessions with certified professional trainers who push you to your absolute limits.</p>
-                        <span class="service-tag">Most Popular</span>
+                        <span class="service-badge">Most Popular</span>
                     </div>
                 </div>
-
-                <div class="service-card" data-aos="fade-up" data-delay="100">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1517931524326-bdd55a541177?w=400&h=300&fit=crop" alt="Cycling">
-                        <div class="service-overlay">
-                            <i class="fas fa-bicycle"></i>
-                        </div>
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1517931524326-bdd55a541177?w=500&h=350&fit=crop" alt="Cycling">
+                        <div class="service-card-icon"><i class="fas fa-bicycle"></i></div>
                     </div>
-                    <div class="service-info">
+                    <div class="service-card-body">
                         <h3>Cycling</h3>
                         <p>High-intensity indoor cycling classes that torch calories and build incredible cardiovascular endurance.</p>
-                        <span class="service-tag">Cardio Blast</span>
+                        <span class="service-badge">Cardio Blast</span>
                     </div>
                 </div>
-
-                <div class="service-card" data-aos="fade-up" data-delay="200">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop" alt="Nutrition Consulting">
-                        <div class="service-overlay">
-                            <i class="fas fa-apple-alt"></i>
-                        </div>
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=350&fit=crop" alt="Nutrition">
+                        <div class="service-card-icon"><i class="fas fa-apple-alt"></i></div>
                     </div>
-                    <div class="service-info">
+                    <div class="service-card-body">
                         <h3>Nutrition Consulting</h3>
-                        <p>Expert diet plans and nutritional guidance tailored to your body type, goals, and lifestyle for maximum results.</p>
-                        <span class="service-tag">Diet Plans</span>
+                        <p>Expert diet plans and nutritional guidance tailored to your body type and goals for maximum results.</p>
+                        <span class="service-badge">Diet Plans</span>
                     </div>
                 </div>
-
-                <div class="service-card" data-aos="fade-up" data-delay="300">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop" alt="Private Lessons">
-                        <div class="service-overlay">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&h=350&fit=crop" alt="Private Lessons">
+                        <div class="service-card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                     </div>
-                    <div class="service-info">
+                    <div class="service-card-body">
                         <h3>Private Lessons</h3>
                         <p>Exclusive one-on-one coaching sessions focused entirely on your specific needs and fitness objectives.</p>
-                        <span class="service-tag">Exclusive</span>
+                        <span class="service-badge">Exclusive</span>
                     </div>
                 </div>
-
-                <div class="service-card" data-aos="fade-up" data-delay="400">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&h=300&fit=crop" alt="Youth Classes">
-                        <div class="service-overlay">
-                            <i class="fas fa-child"></i>
-                        </div>
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=500&h=350&fit=crop" alt="Youth Classes">
+                        <div class="service-card-icon"><i class="fas fa-child"></i></div>
                     </div>
-                    <div class="service-info">
+                    <div class="service-card-body">
                         <h3>Youth Classes</h3>
                         <p>Age-appropriate fitness programs designed to build strength, confidence, and discipline in young athletes.</p>
-                        <span class="service-tag">Youth</span>
+                        <span class="service-badge">Youth</span>
                     </div>
                 </div>
-
-                <div class="service-card" data-aos="fade-up" data-delay="500">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop" alt="Aerobics">
-                        <div class="service-overlay">
-                            <i class="fas fa-heartbeat"></i>
-                        </div>
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&h=350&fit=crop" alt="Aerobics">
+                        <div class="service-card-icon"><i class="fas fa-heartbeat"></i></div>
                     </div>
-                    <div class="service-info">
+                    <div class="service-card-body">
                         <h3>Aerobics</h3>
                         <p>High-energy group aerobic sessions that combine fun movements with intense fat-burning cardio workouts.</p>
-                        <span class="service-tag">Group Class</span>
+                        <span class="service-badge">Group Class</span>
                     </div>
                 </div>
-
-                <div class="service-card service-card-wide" data-aos="fade-up" data-delay="600">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&h=300&fit=crop" alt="Fitness Cardio Muscle Building">
-                        <div class="service-overlay">
-                            <i class="fas fa-dumbbell"></i>
-                        </div>
-                    </div>
-                    <div class="service-info">
-                        <h3>Fitness, Cardio & Muscle Building</h3>
-                        <p>Complete fitness programs combining cardiovascular training, strength building, and muscle conditioning for a total body transformation. State-of-the-art equipment and expert guidance await you.</p>
-                        <span class="service-tag">Complete Program</span>
-                    </div>
+            </div>
+            <!-- Wide Fitness Card -->
+            <div class="service-card service-card-full">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1200&h=400&fit=crop" alt="Fitness Cardio Muscle Building">
+                    <div class="service-card-icon"><i class="fas fa-dumbbell"></i></div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Fitness, Cardio & Muscle Building</h3>
+                    <p>Complete fitness programs combining cardiovascular training, strength building, and muscle conditioning for a total body transformation. State-of-the-art equipment and expert guidance await you at C4 GYM.</p>
+                    <span class="service-badge">Complete Program</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Painful Quote Banner -->
-    <section class="quote-banner quote-banner-2">
-        <div class="quote-overlay"></div>
-        <div class="quote-content">
-            <i class="fas fa-skull-crossbones quote-icon"></i>
-            <h2>"Nobody cares about your excuses. Nobody pities you for procrastinating. Nobody is going to come knock on your door and make you do the work. It's your life. It's your dream. Wake up and make it happen."</h2>
-            <div class="quote-line"></div>
-            <p>— No Excuses</p>
+    <!-- ========== QUOTE DIVIDER 3 ========== -->
+    <div class="quote-divider">
+        <div class="quote-divider-bg" style="background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1920&h=400&fit=crop');"></div>
+        <div class="quote-divider-overlay"></div>
+        <div class="quote-divider-content">
+            <i class="fas fa-fist-raised quote-divider-icon"></i>
+            <p class="quote-divider-text">"The body achieves what the mind believes. Your only limit is you."</p>
+            <span class="quote-divider-author">— C4 GYM Philosophy</span>
         </div>
-                    </section>
-        <!-- Membership Plans Section -->
-    <section id="plans" class="plans-section">
-        <div class="container">
+                            </div>
+        <!-- ========== MEMBERSHIP PLANS SECTION ========== -->
+    <section id="plans" class="section plans-section">
+        <div class="section-bg-image" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1920&h=1080&fit=crop');"></div>
+        <div class="section-bg-overlay dark-overlay"></div>
+        <div class="container section-content">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-crown"></i> MEMBERSHIP</span>
-                <h2 class="section-title">CHOOSE YOUR <span class="highlight">PLAN</span></h2>
-                <div class="title-line"></div>
-                <p class="section-desc">"The best investment you can make is in yourself."</p>
+                <h2 class="section-title">CHOOSE YOUR <span class="text-gradient">PLAN</span></h2>
+                <div class="section-line"></div>
             </div>
             <div class="plans-grid">
-                <!-- 1 Month Plan -->
-                <div class="plan-card" data-aos="fade-up">
-                    <div class="plan-badge">Starter</div>
-                    <div class="plan-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <h3 class="plan-duration">1 Month</h3>
-                    <div class="plan-price">
-                        <span class="currency">PKR</span>
-                        <span class="amount">3,500</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> Full Gym Access</li>
-                        <li><i class="fas fa-check"></i> All Equipment</li>
-                        <li><i class="fas fa-check"></i> Locker Room</li>
-                        <li><i class="fas fa-check"></i> Basic Guidance</li>
-                        <li><i class="fas fa-check"></i> Flexible Timing</li>
+                <!-- 1 Month -->
+                <div class="plan-card">
+                    <div class="plan-label">Starter</div>
+                    <div class="plan-icon-wrap"><i class="fas fa-dumbbell"></i></div>
+                    <h3 class="plan-name">1 Month</h3>
+                    <div class="plan-price"><span class="plan-currency">PKR</span><span class="plan-amount">3,500</span><span class="plan-per">/month</span></div>
+                    <ul class="plan-list">
+                        <li><i class="fas fa-check-circle"></i> Full Gym Access</li>
+                        <li><i class="fas fa-check-circle"></i> All Equipment</li>
+                        <li><i class="fas fa-check-circle"></i> Locker Room</li>
+                        <li><i class="fas fa-check-circle"></i> Basic Guidance</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible Timing</li>
                     </ul>
-                    <button class="plan-btn" onclick="showMembershipPopup()">
-                        <i class="fas fa-bolt"></i> Get Started
-                    </button>
+                    <button class="plan-cta" onclick="openMembershipPopup()"><i class="fas fa-bolt"></i> Get Started</button>
                 </div>
-
-                <!-- 3 Months Plan -->
-                <div class="plan-card plan-featured" data-aos="fade-up" data-delay="100">
+                <!-- 3 Months -->
+                <div class="plan-card plan-card-popular">
                     <div class="plan-ribbon">BEST VALUE</div>
-                    <div class="plan-badge">Popular</div>
-                    <div class="plan-icon">
-                        <i class="fas fa-fire-alt"></i>
-                    </div>
-                    <h3 class="plan-duration">3 Months</h3>
-                    <div class="plan-price">
-                        <span class="currency">PKR</span>
-                        <span class="amount">3,000</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <div class="plan-save">You Save PKR 1,500!</div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> Full Gym Access</li>
-                        <li><i class="fas fa-check"></i> All Equipment</li>
-                        <li><i class="fas fa-check"></i> Locker Room</li>
-                        <li><i class="fas fa-check"></i> Personal Guidance</li>
-                        <li><i class="fas fa-check"></i> Diet Consultation</li>
-                        <li><i class="fas fa-check"></i> Flexible Timing</li>
-                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    <div class="plan-label">Popular</div>
+                    <div class="plan-icon-wrap"><i class="fas fa-fire-alt"></i></div>
+                    <h3 class="plan-name">3 Months</h3>
+                    <div class="plan-price"><span class="plan-currency">PKR</span><span class="plan-amount">3,000</span><span class="plan-per">/month</span></div>
+                    <div class="plan-saving">You Save PKR 1,500!</div>
+                    <ul class="plan-list">
+                        <li><i class="fas fa-check-circle"></i> Full Gym Access</li>
+                        <li><i class="fas fa-check-circle"></i> All Equipment</li>
+                        <li><i class="fas fa-check-circle"></i> Locker Room</li>
+                        <li><i class="fas fa-check-circle"></i> Personal Guidance</li>
+                        <li><i class="fas fa-check-circle"></i> Diet Consultation</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible Timing</li>
+                        <li><i class="fas fa-check-circle"></i> Priority Support</li>
                     </ul>
-                    <button class="plan-btn plan-btn-featured" onclick="showMembershipPopup()">
-                        <i class="fas fa-crown"></i> Get This Plan
-                    </button>
+                    <button class="plan-cta plan-cta-popular" onclick="openMembershipPopup()"><i class="fas fa-crown"></i> Get This Plan</button>
                 </div>
-
-                <!-- 6 Months Plan -->
-                <div class="plan-card" data-aos="fade-up" data-delay="200">
-                    <div class="plan-badge">Champion</div>
-                    <div class="plan-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3 class="plan-duration">6 Months</h3>
-                    <div class="plan-price">
-                        <span class="currency">PKR</span>
-                        <span class="amount">2,500</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <div class="plan-save">You Save PKR 6,000!</div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> Full Gym Access</li>
-                        <li><i class="fas fa-check"></i> All Equipment</li>
-                        <li><i class="fas fa-check"></i> Locker Room</li>
-                        <li><i class="fas fa-check"></i> Personal Trainer</li>
-                        <li><i class="fas fa-check"></i> Diet Plan</li>
-                        <li><i class="fas fa-check"></i> All Classes Free</li>
-                        <li><i class="fas fa-check"></i> 24/7 Support</li>
-                        <li><i class="fas fa-check"></i> Guest Pass (2/month)</li>
+                <!-- 6 Months -->
+                <div class="plan-card">
+                    <div class="plan-label">Champion</div>
+                    <div class="plan-icon-wrap"><i class="fas fa-trophy"></i></div>
+                    <h3 class="plan-name">6 Months</h3>
+                    <div class="plan-price"><span class="plan-currency">PKR</span><span class="plan-amount">2,500</span><span class="plan-per">/month</span></div>
+                    <div class="plan-saving">You Save PKR 6,000!</div>
+                    <ul class="plan-list">
+                        <li><i class="fas fa-check-circle"></i> Full Gym Access</li>
+                        <li><i class="fas fa-check-circle"></i> All Equipment</li>
+                        <li><i class="fas fa-check-circle"></i> Locker Room</li>
+                        <li><i class="fas fa-check-circle"></i> Personal Trainer</li>
+                        <li><i class="fas fa-check-circle"></i> Diet Plan</li>
+                        <li><i class="fas fa-check-circle"></i> All Classes Free</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 Support</li>
+                        <li><i class="fas fa-check-circle"></i> Guest Pass (2/mo)</li>
                     </ul>
-                    <button class="plan-btn" onclick="showMembershipPopup()">
-                        <i class="fas fa-rocket"></i> Go Champion
-                    </button>
+                    <button class="plan-cta" onclick="openMembershipPopup()"><i class="fas fa-rocket"></i> Go Champion</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <div class="container">
+    <!-- ========== QUOTE DIVIDER 4 ========== -->
+    <div class="quote-divider">
+        <div class="quote-divider-bg" style="background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1920&h=400&fit=crop');"></div>
+        <div class="quote-divider-overlay"></div>
+        <div class="quote-divider-content">
+            <i class="fas fa-skull quote-divider-icon"></i>
+            <p class="quote-divider-text">"Suffer the pain of discipline or suffer the pain of regret. You came here to be FORGED, not to be comfortable."</p>
+            <span class="quote-divider-author">— C4 GYM Rawalpindi</span>
+        </div>
+                                </div>
+        <!-- ========== GALLERY SECTION ========== -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container section-content">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-camera"></i> GALLERY</span>
-                <h2 class="section-title">INSIDE <span class="highlight">C4 GYM</span></h2>
-                <div class="title-line"></div>
+                <h2 class="section-title">INSIDE <span class="text-gradient">C4 GYM</span></h2>
+                <div class="section-line"></div>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item gallery-item-tall">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=700&fit=crop" alt="Gym Floor" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Training Floor</span>
-                    </div>
+                <div class="gallery-item gi-tall">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=800&fit=crop" alt="Gym Floor" loading="lazy">
+                    <div class="gallery-label"><span>Training Floor</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&h=400&fit=crop" alt="Weight Training" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Weight Training</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&h=400&fit=crop" alt="Weight Training" loading="lazy">
+                    <div class="gallery-label"><span>Weight Training</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=500&h=400&fit=crop" alt="Deadlift" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Heavy Lifts</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=600&h=400&fit=crop" alt="Deadlift" loading="lazy">
+                    <div class="gallery-label"><span>Heavy Lifts</span></div>
                 </div>
-                <div class="gallery-item gallery-item-tall">
-                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=500&h=700&fit=crop" alt="Dumbbells" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Equipment</span>
-                    </div>
+                <div class="gallery-item gi-tall">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&h=800&fit=crop" alt="Dumbbells" loading="lazy">
+                    <div class="gallery-label"><span>Equipment</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=400&fit=crop" alt="Cardio" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Cardio Zone</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop" alt="Cardio" loading="lazy">
+                    <div class="gallery-label"><span>Cardio Zone</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=500&h=400&fit=crop" alt="Workout" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Beast Mode</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=600&h=400&fit=crop" alt="Workout" loading="lazy">
+                    <div class="gallery-label"><span>Beast Mode</span></div>
                 </div>
             </div>
         </div>
     </section>
-        <!-- Quotes Section -->
-    <section id="quotes" class="quotes-section">
-        <div class="container">
+
+    <!-- ========== MOTIVATION QUOTES SLIDER ========== -->
+    <div class="quote-divider quote-divider-dark">
+        <div class="quote-divider-overlay" style="background:var(--dark-2);"></div>
+        <div class="container section-content" style="position:relative;z-index:2;">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-fist-raised"></i> MOTIVATION</span>
-                <h2 class="section-title">FUEL YOUR <span class="highlight">FIRE</span></h2>
-                <div class="title-line"></div>
+                <h2 class="section-title">FUEL YOUR <span class="text-gradient">FIRE</span></h2>
+                <div class="section-line"></div>
             </div>
-            <div class="quotes-slider">
+            <div class="quotes-carousel">
                 <div class="quotes-track" id="quotesTrack">
-                    <div class="quote-card">
-                        <div class="quote-card-icon"><i class="fas fa-skull"></i></div>
-                        <p>"You're not tired. You're uninspired. Find what sets your soul on fire and chase it until your legs give out."</p>
-                        <span class="quote-type">— Pain Fuel</span>
-                    </div>
-                    <div class="quote-card">
-                        <div class="quote-card-icon"><i class="fas fa-heartbeat"></i></div>
-                        <p>"Sore today. Strong tomorrow. The iron never lies. 200 pounds is always 200 pounds."</p>
-                        <span class="quote-type">— Iron Truth</span>
-                    </div>
-                    <div class="quote-card">
-                        <div class="quote-card-icon"><i class="fas fa-brain"></i></div>
-                        <p>"Your mind will quit a thousand times before your body will. Feel the fear and do it anyway."</p>
-                        <span class="quote-type">— Mental Warfare</span>
-                    </div>
-                    <div class="quote-card">
-                        <div class="quote-card-icon"><i class="fas fa-fire"></i></div>
-                        <p>"Everyone wants to be a beast, until it's time to do what beasts do. Stop talking. Start lifting."</p>
-                        <span class="quote-type">— Beast Mode</span>
-                    </div>
-                    <div class="quote-card">
-                        <div class="quote-card-icon"><i class="fas fa-bolt"></i></div>
-                        <p>"The last three or four reps is what makes the muscle grow. This area of pain divides a champion from someone who is not."</p>
-                        <span class="quote-type">— Arnold</span>
-                    </div>
-                    <div class="quote-card">
-                        <div class="quote-card-icon"><i class="fas fa-skull-crossbones"></i></div>
-                        <p>"Nobody is coming to save you. This life is 100% your responsibility. Get up, show up, and never give up."</p>
-                        <span class="quote-type">— Raw Truth</span>
-                    </div>
-                    <div class="quote-card">
-                        <div class="quote-card-icon"><i class="fas fa-fist-raised"></i></div>
-                        <p>"Pain is temporary. Quitting lasts forever. The only workout you regret is the one you didn't do."</p>
-                        <span class="quote-type">— No Regrets</span>
-                    </div>
-                    <div class="quote-card">
-                        <div class="quote-card-icon"><i class="fas fa-crown"></i></div>
-                        <p>"You don't have to be great to start, but you have to start to be great. Your future self is watching."</p>
-                        <span class="quote-type">— Start Now</span>
-                    </div>
+                    <div class="q-card"><div class="q-card-icon"><i class="fas fa-skull"></i></div><p>"You're not tired. You're uninspired. Find what sets your soul on fire and chase it until your legs give out."</p><span>— Pain Fuel</span></div>
+                    <div class="q-card"><div class="q-card-icon"><i class="fas fa-heartbeat"></i></div><p>"Sore today. Strong tomorrow. The iron never lies. 200 pounds is always 200 pounds."</p><span>— Iron Truth</span></div>
+                    <div class="q-card"><div class="q-card-icon"><i class="fas fa-brain"></i></div><p>"Your mind will quit a thousand times before your body will. Feel the fear and do it anyway."</p><span>— Mental Warfare</span></div>
+                    <div class="q-card"><div class="q-card-icon"><i class="fas fa-fire"></i></div><p>"Everyone wants to be a beast, until it's time to do what beasts do. Stop talking. Start lifting."</p><span>— Beast Mode</span></div>
+                    <div class="q-card"><div class="q-card-icon"><i class="fas fa-bolt"></i></div><p>"The last three or four reps is what makes the muscle grow. This area of pain divides a champion from someone who is not."</p><span>— Arnold</span></div>
+                    <div class="q-card"><div class="q-card-icon"><i class="fas fa-skull-crossbones"></i></div><p>"Nobody is coming to save you. This life is 100% your responsibility. Get up, show up, and never give up."</p><span>— Raw Truth</span></div>
+                    <div class="q-card"><div class="q-card-icon"><i class="fas fa-fist-raised"></i></div><p>"Pain is temporary. Quitting lasts forever. The only workout you regret is the one you didn't do."</p><span>— No Regrets</span></div>
+                    <div class="q-card"><div class="q-card-icon"><i class="fas fa-crown"></i></div><p>"You don't have to be great to start, but you have to start to be great. Your future self is watching."</p><span>— Start Now</span></div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Another Quote Banner -->
-    <section class="quote-banner quote-banner-3">
-        <div class="quote-overlay"></div>
-        <div class="quote-content">
-            <i class="fas fa-fist-raised quote-icon"></i>
-            <h2>"Suffer the pain of discipline or suffer the pain of regret. The choice is yours. But remember — you came here to be FORGED, not to be comfortable."</h2>
-            <div class="quote-line"></div>
-            <p>— C4 GYM Rawalpindi</p>
-        </div>
-    </section>
-
-    <!-- Social Media Section -->
-    <section class="social-section">
-        <div class="container">
+                        </div>
+        <!-- ========== SOCIAL MEDIA SECTION ========== -->
+    <section class="section social-section">
+        <div class="container section-content">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-share-alt"></i> CONNECT</span>
-                <h2 class="section-title">FOLLOW <span class="highlight">US</span></h2>
-                <div class="title-line"></div>
-                <p class="section-desc">Stay updated with our latest workouts, transformations and events</p>
+                <h2 class="section-title">FOLLOW <span class="text-gradient">US</span></h2>
+                <div class="section-line"></div>
             </div>
-            <div class="social-cards">
-                <a href="https://www.instagram.com" target="_blank" class="social-card social-instagram">
-                    <div class="social-card-bg"></div>
-                    <div class="social-card-content">
-                        <i class="fab fa-instagram"></i>
-                        <h3>Instagram</h3>
-                        <p>@c4gym.rawalpindi</p>
-                        <span class="follow-btn-social">
-                            <i class="fas fa-plus"></i> Follow on Instagram
-                        </span>
-                    </div>
+            <div class="social-grid">
+                <a href="https://www.instagram.com" target="_blank" class="social-card social-insta">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>@c4gym.rawalpindi</p>
+                    <span class="social-follow-btn"><i class="fas fa-plus"></i> Follow on Instagram</span>
                 </a>
-                <a href="https://www.facebook.com" target="_blank" class="social-card social-facebook">
-                    <div class="social-card-bg"></div>
-                    <div class="social-card-content">
-                        <i class="fab fa-facebook-f"></i>
-                        <h3>Facebook</h3>
-                        <p>C4 GYM Rawalpindi</p>
-                        <span class="follow-btn-social">
-                            <i class="fas fa-thumbs-up"></i> Follow on Facebook
-                        </span>
-                    </div>
+                <a href="https://www.facebook.com" target="_blank" class="social-card social-fb">
+                    <i class="fab fa-facebook-f"></i>
+                    <h3>Facebook</h3>
+                    <p>C4 GYM Rawalpindi</p>
+                    <span class="social-follow-btn"><i class="fas fa-thumbs-up"></i> Follow on Facebook</span>
                 </a>
             </div>
         </div>
-                        </section>
-        <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
+    </section>
+
+    <!-- ========== QUOTE DIVIDER 5 ========== -->
+    <div class="quote-divider">
+        <div class="quote-divider-bg" style="background-image: url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1920&h=400&fit=crop');"></div>
+        <div class="quote-divider-overlay"></div>
+        <div class="quote-divider-content">
+            <i class="fas fa-fire quote-divider-icon"></i>
+            <p class="quote-divider-text">"The best investment you can make is in yourself. Don't wish for it — work for it."</p>
+            <span class="quote-divider-author">— Self Made</span>
+        </div>
+    </div>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contact" class="section contact-section">
+        <div class="container section-content">
             <div class="section-header">
                 <span class="section-tag"><i class="fas fa-map-marker-alt"></i> REACH US</span>
-                <h2 class="section-title">CONTACT & <span class="highlight">LOCATION</span></h2>
-                <div class="title-line"></div>
+                <h2 class="section-title">CONTACT & <span class="text-gradient">LOCATION</span></h2>
+                <div class="section-line"></div>
             </div>
             <div class="contact-grid">
-                <div class="contact-info-cards">
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-card-info">
-                            <h4>Our Address</h4>
-                            <p>22 No. Chungi Rd, opposite Cheezious, Cantt, Rawalpindi, 44000</p>
-                        </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><h4>Our Address</h4><p>22 No. Chungi Rd, opposite Cheezious, Cantt, Rawalpindi, 44000</p></div>
                     </div>
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="contact-card-info">
-                            <h4>Call Us</h4>
-                            <p><a href="tel:03175793957">0317 5793957</a></p>
-                        </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div><h4>Call Us</h4><p><a href="tel:03175793957">0317 5793957</a></p></div>
                     </div>
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fas fa-sms"></i></div>
-                        <div class="contact-card-info">
-                            <h4>Text Message</h4>
-                            <p><a href="sms:03175793957">0317 5793957</a></p>
-                        </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-sms"></i></div>
+                        <div><h4>Text Message</h4><p><a href="sms:03175793957">0317 5793957</a></p></div>
                     </div>
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
-                        <div class="contact-card-info">
-                            <h4>Working Hours</h4>
-                            <p>Open Daily · Closes 12:30 AM</p>
-                        </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+                        <div><h4>Working Hours</h4><p>Open Daily · Closes 12:30 AM</p></div>
                     </div>
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fas fa-star"></i></div>
-                        <div class="contact-card-info">
-                            <h4>Rating</h4>
-                            <p>5.0 ★★★★★ (39 Reviews)</p>
-                        </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-star"></i></div>
+                        <div><h4>Rating</h4><p>5.0 ★★★★★ (39 Reviews)</p></div>
                     </div>
                 </div>
                 <div class="contact-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.0!2d73.07!3d33.59!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzI0LjAiTiA3M8KwMDQnMTIuMCJF!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=22+Chungi+Rd+Cantt+Rawalpindi" target="_blank" class="directions-btn">
-                        <i class="fas fa-directions"></i> Get Directions
-                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=22+Chungi+Rd+Cantt+Rawalpindi" target="_blank" class="map-dir-btn"><i class="fas fa-directions"></i> Get Directions</a>
                 </div>
             </div>
-            <div class="contact-actions">
-                <a href="tel:03175793957" class="action-btn action-call"><i class="fas fa-phone-alt"></i><span>Call Now</span></a>
-                <a href="sms:03175793957" class="action-btn action-text"><i class="fas fa-comment-dots"></i><span>Text Message</span></a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=22+Chungi+Rd+Cantt+Rawalpindi" target="_blank" class="action-btn action-direction"><i class="fas fa-route"></i><span>Directions</span></a>
-                <button class="action-btn action-share" onclick="shareWebsite()"><i class="fas fa-share-alt"></i><span>Share</span></button>
+            <div class="contact-buttons">
+                <a href="tel:03175793957" class="contact-action"><i class="fas fa-phone-alt"></i><span>Call Now</span></a>
+                <a href="sms:03175793957" class="contact-action"><i class="fas fa-comment-dots"></i><span>Text</span></a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=22+Chungi+Rd+Cantt+Rawalpindi" target="_blank" class="contact-action"><i class="fas fa-route"></i><span>Directions</span></a>
+                <button class="contact-action" onclick="shareWebsite()"><i class="fas fa-share-alt"></i><span>Share</span></button>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
+        <!-- ========== FOOTER ========== -->
     <footer class="footer">
-        <div class="footer-top">
+        <div class="footer-main">
             <div class="container">
                 <div class="footer-grid">
-                    <div class="footer-about">
+                    <div class="footer-col">
                         <div class="footer-logo"><span class="logo-c4">C4</span><span class="logo-gym">GYM</span></div>
                         <p>"Where champions are forged and excuses are destroyed."</p>
-                        <div class="footer-social">
-                            <a href="https://www.instagram.com" target="_blank" class="social-link instagram-link"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.facebook.com" target="_blank" class="social-link facebook-link"><i class="fab fa-facebook-f"></i></a>
+                        <div class="footer-socials">
+                            <a href="https://www.instagram.com" target="_blank" class="fs-insta"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com" target="_blank" class="fs-fb"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
-                    <div class="footer-links-section">
+                    <div class="footer-col">
                         <h4>Quick Links</h4>
                         <ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#plans">Membership</a></li><li><a href="#contact">Contact</a></li></ul>
                     </div>
-                    <div class="footer-links-section">
+                    <div class="footer-col">
                         <h4>Services</h4>
                         <ul><li><a href="#services">Personal Training</a></li><li><a href="#services">Cycling</a></li><li><a href="#services">Nutrition</a></li><li><a href="#services">Aerobics</a></li><li><a href="#services">Youth Classes</a></li></ul>
                     </div>
-                    <div class="footer-contact">
-                        <h4>Contact Info</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> 22 No. Chungi Rd, opp. Cheezious, Cantt, Rawalpindi</p>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 22 No. Chungi Rd, Cantt, Rawalpindi</p>
                         <p><i class="fas fa-phone"></i> <a href="tel:03175793957">0317 5793957</a></p>
                         <p><i class="fas fa-clock"></i> Open · Closes 12:30 AM</p>
                     </div>
@@ -656,35 +537,41 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container"><p>&copy; 2024 C4 GYM Rawalpindi. All Rights Reserved. | Built with 💪 and Dedication</p></div>
+            <div class="container">
+                <p>&copy; 2024 C4 GYM Rawalpindi. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Membership Popup -->
-    <div class="popup-overlay" id="membershipPopup">
-        <div class="popup-container">
-            <button class="popup-close" onclick="closeMembershipPopup()"><i class="fas fa-times"></i></button>
-            <div class="popup-icon"><i class="fas fa-crown"></i></div>
+    <!-- ========== MEMBERSHIP POPUP ========== -->
+    <div class="popup-wrap" id="membershipPopup">
+        <div class="popup-box">
+            <button class="popup-x" onclick="closeMembershipPopup()"><i class="fas fa-times"></i></button>
+            <div class="popup-top-icon"><i class="fas fa-crown"></i></div>
             <h2>Join C4 GYM Family!</h2>
             <p>For subscription of membership plans, please contact us directly:</p>
-            <div class="popup-contact">
-                <a href="tel:03175793957" class="popup-btn popup-call"><i class="fas fa-phone-alt"></i> Call: 0317 5793957</a>
-                <a href="sms:03175793957" class="popup-btn popup-sms"><i class="fas fa-sms"></i> Text: 0317 5793957</a>
+            <div class="popup-actions">
+                <a href="tel:03175793957" class="popup-call"><i class="fas fa-phone-alt"></i> Call: 0317 5793957</a>
+                <a href="sms:03175793957" class="popup-text"><i class="fas fa-sms"></i> Text: 0317 5793957</a>
             </div>
-            <div class="popup-address"><i class="fas fa-map-marker-alt"></i><p>Visit us at: 22 No. Chungi Rd, opposite Cheezious, Cantt, Rawalpindi, 44000</p></div>
-            <div class="popup-social">
+            <div class="popup-addr">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Visit us at: 22 No. Chungi Rd, opposite Cheezious, Cantt, Rawalpindi, 44000</p>
+            </div>
+            <div class="popup-socials">
                 <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
             </div>
         </div>
     </div>
 
-    <!-- Floating Action Buttons -->
-    <div class="fab-container">
-        <a href="tel:03175793957" class="fab-btn fab-call" title="Call C4 GYM"><i class="fas fa-phone-alt"></i></a>
-        <a href="#home" class="fab-btn fab-top" id="backToTop" title="Back to Top"><i class="fas fa-chevron-up"></i></a>
+    <!-- ========== FLOATING BUTTONS ========== -->
+    <div class="floating-btns">
+        <a href="tel:03175793957" class="float-btn float-call"><i class="fas fa-phone-alt"></i></a>
+        <a href="#home" class="float-btn float-top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
+                            
